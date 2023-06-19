@@ -1,0 +1,47 @@
+.service
+  margin-top: 80px
+  h2.title
+    margin-bottom: 24px
+  .service_item
+    &:hover
+      cursor: pointer
+      .name
+        background: $textcolor
+        color: white
+        &::before
+          background: $textcolor
+    .row
+      border-top: 1px solid $textcolor
+    .name
+      border-right: 1px solid $textcolor
+      padding-top: 24px
+      padding-bottom: 13px
+      padding-right: 8px
+      height: 216px
+      transition: all 0.3s ease
+      position: relative
+      font-family: actay
+      font-weight: 700
+      font-size: 32px
+      line-height: 40px
+      display: flex
+      justify-content: space-between
+      flex-direction: column
+      text-transform: uppercase
+      &::before
+        content: ''
+        transition: all 0.3s ease
+        position: absolute
+        height: 100%
+        top: 0
+        left: calc(var(--bs-gutter-x)*-.5)
+        width: calc(var(--bs-gutter-x)*.5)
+      a
+        text-align: right
+    .description
+      padding-top: 49px
+      width: 100%
+      font-weight: 400
+      font-size: 16px
+      line-height: 114%
+      

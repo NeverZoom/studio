@@ -1,0 +1,90 @@
+.border-right
+  border-right: 1px solid $textcolor
+
+.border-left
+  border-left: 1px solid $textcolor
+
+.dark-section
+  .border-right, .border-left
+    border-color: white
+
+a
+  display: inline-block
+  text-decoration: none
+  transition: all 0.3s ease
+  font-weight: 400
+  font-size: 16px
+  line-height: 20px
+  text-transform: lowercase
+  &:hover
+    text-decoration: none
+    
+.button
+  color: $textcolor
+  background: white
+  &:hover
+    color: white
+    background: $textcolor
+
+.full-button a
+  position: relative
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  &:hover
+    &::before, &::after
+      background: $textcolor
+  &::before, &::after
+    content: ''
+    position: absolute
+    width: calc(var(--bs-gutter-x)*.5)
+    height: 100%
+    background: none
+    transition: all 0.3s ease
+  &::before
+    left: calc(var(--bs-gutter-x)*-0.5)
+  &::after
+    right: calc(var(--bs-gutter-x)*-0.5)
+
+ul
+  padding: 0
+  margin: 0
+
+nav
+  ul
+    list-style: none
+
+h1.h1
+  font-weight: 300
+  font-size: 36px
+  line-height: 114.5%
+  text-align: center
+  color: $textcolor
+
+p
+  margin: 0
+
+.cursor-dot, .cursor-dot-outline
+  pointer-events: none
+  position: absolute
+  z-index: 1000000
+  top: 50%
+  left: 50%
+  border-radius: 50%
+  opacity: 0
+  transform: translate(-50%, -50%)
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out
+  $size: 20px
+  width: $size
+  height: $size
+  border: 2px solid $accent
+
+
+h2.title
+  font-weight: 700
+  font-size: 14px
+  line-height: 18px
+  text-transform: lowercase
+  margin: 0
